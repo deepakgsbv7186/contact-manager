@@ -66,7 +66,8 @@ const Home = () => {
           <input
             type="text"
             onChange={filterContacts}
-            className="border-1 flex-grow rounded-md border bg-dark p-2 pl-10 text-xl text-primary outline-none"
+            placeholder="Search by name..."
+            className="border-1 w-[60%] flex-grow rounded-md border bg-dark p-2 pl-10 text-xl text-primary outline-none"
           />
         </div>
         <div className="flex  justify-center">
