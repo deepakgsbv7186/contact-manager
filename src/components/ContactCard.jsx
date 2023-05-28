@@ -6,6 +6,7 @@ import { db } from "../config/firebase";
 import useDisclose from "../hooks/useDisclose";
 import AddPlusUpdate from "./AddPlusUpdate";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const ContactCard = ({ contact }) => {
   // modal hook with open and close funtionality
@@ -22,13 +23,16 @@ const ContactCard = ({ contact }) => {
   return (
     <>
       <div className="mx-auto flex w-[340px] gap-2 rounded-lg bg-base p-4">
-        <div className="flex w-3/4 items-center justify-start gap-2">
+        <Link
+          to={`/contact/${contact.id}`}
+          className="flex w-3/4 items-center justify-start gap-2"
+        >
           <RxAvatar className="text-5xl text-secondary" />
           <div className="space-y-1">
             <h2 className="font-bold text-primary">{contact.name}</h2>
             <p className="text-sm text-secondary">{contact.email}</p>
           </div>
-        </div>
+        </Link>
         <div className="flex w-1/4 items-center justify-evenly gap-3 text-2xl">
           <BiEdit onClick={onOpen} className="cursor-pointer text-blue-300" />
           <BiTrash
