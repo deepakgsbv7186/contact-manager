@@ -60,19 +60,21 @@ const Home = () => {
   return (
     <>
       {/* Search Bar Starts */}
-      <div className="mx-auto my-4 flex justify-center gap-1">
+      <div className="mx-auto flex w-[80%] items-center justify-evenly gap-3">
         <div className="relative flex items-center">
-          <FcSearch className="text-primary absolute pl-2 text-4xl" />
+          <FcSearch className="absolute pl-2 text-4xl text-primary" />
           <input
             type="text"
             onChange={filterContacts}
-            className="border-1 bg-dark text-primary flex-grow rounded-md border p-2 pl-10 text-xl outline-none"
+            className="border-1 flex-grow rounded-md border bg-dark p-2 pl-10 text-xl text-primary outline-none"
           />
         </div>
-        <AiFillPlusCircle
-          onClick={onOpen}
-          className="text-secondary cursor-pointer text-5xl"
-        />
+        <div className="flex  justify-center">
+          <AiFillPlusCircle
+            onClick={onOpen}
+            className="cursor-pointer  text-5xl text-secondary"
+          />
+        </div>
       </div>
       {/* Search Bar Ends */}
 

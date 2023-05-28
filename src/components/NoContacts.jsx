@@ -3,7 +3,7 @@ import React from "react";
 const NoContacts = () => {
   return (
     <>
-      <div className="flex h-[60vh] items-center justify-center gap-2">
+      <div className="flex h-[60vh] w-full items-center justify-center gap-2">
         <div>
           <img
             src="/assets/contact.png"
